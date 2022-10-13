@@ -15,7 +15,19 @@ public class Kata3_Ismael {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        HistogramDisplay histogramdisplay = new HistogramDisplay("HISTOGRAMA");
+        //MODEL
+        Histogram<String>histogram = new Histogram<String>();
+        
+        histogram.increment("ulpgc.es");
+        histogram.increment("ulpgc.es");
+        histogram.increment("hotmail.com");
+        histogram.increment("gmail.com");
+        histogram.increment("google.com");
+        histogram.increment("google.com");
+        histogram.increment("ull.es");
+        
+        //VIEW
+        HistogramDisplay histogramdisplay = new HistogramDisplay("HISTOGRAMA",histogram);
         histogramdisplay.execute();
     }
     
